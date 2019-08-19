@@ -6,28 +6,37 @@ public class CustomerBuilder {
     private Integer age;
     private String address;
 
-    public static class Builder{
+    public static class builder {
         private String id;
         private String name;
         private Integer age;
         private String address;
 
-        public Builder id(String id){
+        /**
+         * cunstructor digunakan jika ada nilai yg sifatnya mandatory
+         * @param id
+         * @return
+         */
+//        public builder(String id){
+//            this.id = id;
+//        }
+
+        public builder id(String id){
             this.id = id;
             return this;
         }
 
-        public Builder name(String name){
+        public builder name(String name){
             this.name = name;
             return this;
         }
 
-        public Builder age(Integer age){
+        public builder age(Integer age){
             this.age = age;
             return this;
         }
 
-        public Builder address(String address){
+        public builder address(String address){
             this.address = address;
             return this;
         }
@@ -37,7 +46,7 @@ public class CustomerBuilder {
         }
     }
 
-    private CustomerBuilder(Builder builder){
+    private CustomerBuilder(builder builder){
         name = builder.name;
         age = builder.age;
         address = builder.address;
