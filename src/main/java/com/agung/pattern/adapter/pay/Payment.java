@@ -8,14 +8,24 @@
 
 package com.agung.pattern.adapter.pay;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author agung
  */
 public interface Payment {
 
-    public void setNominal(String nominal);
+    String getNomorKartu();
 
-    public void setName(String name);
+    String getNama();
+
+    BigDecimal getSaldo();
+
+    void setNomorKartu(String noKartu);
+
+    void setNama(String nama);
+
+    void setSaldo(BigDecimal saldo);
 
 }

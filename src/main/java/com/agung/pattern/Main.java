@@ -31,5 +31,12 @@ public class Main {
     public static void main(String[] args) {
         useStringBuffer();
         //useStringClass();
+
+        Integer a = 10;
+        Integer b = 20;
+
+        int hasil = a + b;
+
+        System.out.printf("%d + %d = %d", a, b, hasil);
     }
 }
