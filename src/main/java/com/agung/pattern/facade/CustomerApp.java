@@ -1,6 +1,7 @@
 package com.agung.pattern.facade;
 
 public class CustomerApp {
+
     public static void main(String[] args) {
 
         CustomerRepository customerRepository = new CustomerRepository();

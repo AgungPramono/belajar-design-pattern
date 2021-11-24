@@ -5,7 +5,7 @@ public class ConnectionHelper {
 
     public static Connection getConnection(){
         if (connection == null){
-            connection = new Connection();
+            connection = new Connection("localhost","root","root");
         }
         return connection;
     }
