@@ -9,6 +9,10 @@ public class Customer {
 
     private List<Address> addresses = new ArrayList<>();
 
+    public Customer(String kode, String name) {
+        this.kode = kode;
+        this.name = name;
+    }
     public List<Address> getAddresses() {
         return addresses;
     }
