@@ -9,7 +9,7 @@ public class DatabasePool {
     private static List<Connection> pool = new ArrayList<>();
 
     static {
-        for (int i=0; i<=0; i++){
+        for (int i=0; i<=100; i++){
             Connection connection = new Connection("localhost","root","root");
             pool.add(connection);
         }

@@ -4,19 +4,16 @@ public class CustomerApp {
 
     public static void main(String[] args) {
 
-        CustomerRepository customerRepository = new CustomerRepository();
-        AddressRepository addressRepository = new AddressRepository();
-
         Customer customer = new Customer("c001", "fuan");
 
         Address address1 = new Address("jakarta");
         Address address2 = new Address("surabaya");
 
+        customer.getAddresses().add(address1);
         customer.getAddresses().add(address2);
 
-        customerRepository.save(customer);
-        addressRepository.save(address1);
-        addressRepository.save(address2);
+        CustomerFacade customerFacade = new CustomerFacade();
+        customerFacade.saveCustomer(customer);
 
         //////////////////
 
